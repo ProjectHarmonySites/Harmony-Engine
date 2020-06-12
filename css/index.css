@@ -35,10 +35,21 @@ nav ul li {
     width: 25vw;
     text-align: center;
     cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration-delay: 0.4s;
+    -moz-transition-duration: 0.4s;
+}
+
+nav ul li {
+    border-bottom: 4px solid #7298AA;
 }
 
 nav ul li:hover {
-    background-color: rgb(187, 229, 247);
+    background-color: #bbe5f7;
+}
+
+nav ul li.selected {
+    border-bottom: 4px solid #2db8f3;
 }
 
 /* Lander Section */
@@ -49,6 +60,7 @@ nav ul li:hover {
 }
 
 .logo {
+    cursor: pointer;
     padding: 3em 0 0 ;
     display: flex;
     align-items: center;
@@ -70,5 +82,33 @@ nav ul li:hover {
 
 #application-window {
     width: 90vw;
+    height: auto;
+}
+
+/* Info Section */
+
+.info-section {
+    height: 20em;
+    background-image: url("../images/backgrounds/tree.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Download Section */
+
+#download {
+    height: 85vh;
+    background-image: url("../images/backgrounds/4.png")
+}
+
+#download .content {
+    display: flex; 
+    justify-content: space-around;
+}
+
+#download img {
+    width: 40vw;
     height: auto;
 }

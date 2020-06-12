@@ -11,18 +11,31 @@
 <body>
     <nav>
         <ul>
-            <a href="#"><li>Home</li></a>
+            <a href="/"><li class="selected">Home</li></a>
             <a href="#"><li>Download</li></a>
             <a href="#"><li>Learn</li></a>
             <a href="#"><li>Documentation</li></a>
         </ul>
     </nav>
     <section id="lander">
-        <div class="logo">
+        <div class="logo" onclick="window.location.href = '/'">
             <img id="lander-logo" src="images/icons/favicon.png" alt="Logo">
             <h1>armony Engine</h1>
         </div>
         <img id="application-window" src="images/backgrounds/window-dark.png" alt="Harmony Application Window">
+    </section>
+    <section class="info-section">
+       
+    </section>
+    <section id="download">
+        <div class="content">
+            <div class="buttons">
+                <button>Windows 10</button>
+                <button>MacOS</button>
+                <button>Linux</button>
+            </div>
+            <img src="images/download-undraw.png" alt="Download Image">
+        </div>
     </section>
 </body>
 </html>
