@@ -35,6 +35,16 @@ button.gray-btn:hover {
     background-color: #8f8f8f;
 }
 
+.become-patron button {
+    width: 20vw;
+    height: 4em;
+}
+
+.become-patron button p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
 /* Navigation Section */
 
 nav {
@@ -85,11 +95,12 @@ nav ul li.selected {
 #lander {
     background-image: url("../images/backgrounds/3.png");
     text-align: center;
+    padding: 0 0 2em 0;
 }
 
 .logo {
     cursor: pointer;
-    padding: 3em 0 0 ;
+    padding: 3em 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,8 +112,17 @@ nav ul li.selected {
     font-family: "Open Sans";
 }
 
+#lander .become-patron button {
+    width: 30vw;
+    height: 5em;
+}
+
+#lander .become-patron p {
+    font-size: 1.5rem;
+}
+
 #lander-logo {
-    width: 65.5;
+    width: 65.5px;
     height: 97.25px;
     width: auto;
     text-align: center;
@@ -125,7 +145,8 @@ nav ul li.selected {
 .p1 { background-image: url("../images/backgrounds/tree.jpg"); }
 .p2 { background-image: url("../images/backgrounds/waterfall.jpg"); }
 .p3 { background-image: url("../images/backgrounds/bridge.jpg"); }
-.p4 { background-image: url("../images/backgrounds/ocean.jpg"); }
+.p4 { background-image: url("../images/backgrounds/beach.jpg"); }
+.p5 { background-image: url("../images/backgrounds/ocean.jpg"); }
 
 /* Download Section */
 
@@ -268,25 +289,26 @@ nav ul li.selected {
     margin: 0.6em 0;
 }
 
-/* Footer */
+/* Made Possible Section */
 
-footer {
+#made-possible {
     text-align: center;
+    padding: 0 0 2em 0;
 }
 
-footer h2 {
+#made-possible h2 {
     font-family: "Open Sans";
     font-size: 2rem;
 }
 
-footer .names {
+#made-possible .names {
     font-family: "Open Sans";
     font-size: 1.1rem;
     width: 100vw;
     margin: 0 0 2em 0;
 }
 
-footer .names p {
+#made-possible .names p {
     display: inline-block;
     width: 20vw;
     font-weight: bolder;
@@ -296,9 +318,11 @@ footer .names p {
     -moz-transition-duration: 0.4s;
 }
 
-footer .names p:hover {
+#made-possible .names p:hover {
     font-size: 1.3rem;
 }
+
+/* Footer Section */
 
 footer .wrapper {
     display: flex;

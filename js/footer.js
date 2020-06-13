@@ -17,7 +17,7 @@ First, Last
 `;
 
 $(document).ready(function() {
-	var footer = $("footer .sponsors .names");
+	var footer = $(".sponsors .names");
 	var sponsorsArray = sponsors.split("\n");
 
 	for(var i = 0; i < sponsorsArray.length; i++) {
