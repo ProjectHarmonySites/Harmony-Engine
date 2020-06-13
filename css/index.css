@@ -270,6 +270,36 @@ nav ul li.selected {
 
 /* Footer */
 
+footer {
+    text-align: center;
+}
+
+footer h2 {
+    font-family: "Open Sans";
+    font-size: 2rem;
+}
+
+footer .names {
+    font-family: "Open Sans";
+    font-size: 1.1rem;
+    width: 100vw;
+    margin: 0 0 2em 0;
+}
+
+footer .names p {
+    display: inline-block;
+    width: 20vw;
+    font-weight: bolder;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+}
+
+footer .names p:hover {
+    font-size: 1.3rem;
+}
+
 footer .wrapper {
     display: flex;
     justify-content: space-around;
