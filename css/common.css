@@ -164,3 +164,22 @@ footer .wrapper .head li {
     font-size: 1.5rem;
     text-decoration: underline;
 }
+
+/* Responsive */
+
+@media only screen and (max-width: 900px) {
+    .become-patron button {
+        width: 35vw;
+        height: 4em;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    footer .wrapper {
+        flex-direction: column;
+    }
+
+    .become-patron button {
+        width: 50vw;
+    }
+}

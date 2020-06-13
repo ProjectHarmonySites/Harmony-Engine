@@ -181,3 +181,96 @@
     font-size: 1.2rem;
     margin: 0.6em 0;
 }
+
+/* Responsive */
+
+@media only screen and (max-width: 900px) {
+    .card p {
+        margin: 2em 0.25em;
+    }
+
+    .card button {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .cards {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .card { 
+        width: 50%;
+        margin: 1em 0 1em 0;
+     }
+
+    .card p { margin: 2em 3em; }
+
+    #documentation .wrapper .btns button {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    #download .btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100vw;
+    }
+
+    #download button {
+        width: 50vw;
+        margin: 0.4em 0;
+    }
+
+    #lander .become-patron button {
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #documentation .wrapper {
+        flex-direction: column;
+    }
+
+    #documentation .wrapper p.content {
+        width: 80vw;
+    }
+
+    #documentation .wrapper .btns {
+        margin: 1em 0 0 0;
+    }
+
+    #documentation .wrapper .btns button {
+        width: 50vw;
+    }
+
+    .card { 
+        width: 75%;
+        margin: 1em 0 1em 0;
+     }
+
+     .logo h1 {
+        font-size: 2rem;
+     }
+
+     #lander-logo {
+        width: 45.5px;
+        height: 67.25px;
+        width: auto;
+        text-align: center;
+    }
+
+    #lander .become-patron button {
+        width: 55vw;
+    }
+
+    #download button {
+        width: 65vw;
+        margin: 0.4em 0;
+    }
+}
+
