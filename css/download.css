@@ -1,5 +1,4 @@
 #hero {
-	height: 90vh;
 	background-image: url("../images/backgrounds/6.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -27,11 +26,10 @@
 #hero #words {
 	margin: 0;
 	width: 40vw;
-	font-size: 1.45rem;
-	
+	font-size: 1.45rem;	
 }
 
-#hero .btns, #hero #words {
+.card {
 	background-color: #ccccccaa;
 	padding: 2em;
 	border-top: 80px solid #34a4eb;
@@ -66,4 +64,26 @@
 #hero .btns button {
 	width: 75%;
 	margin: 0 0 0.5em 0;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 880px) {
+	#hero .wrapper {
+		flex-direction: column;
+	}
+
+	#hero .card {
+		margin: 0 0 1em 0;
+	}
+}
+
+@media only screen and (max-width: 570px) {
+	#hero .card {
+		width: 80vw;
+		text-align: center;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
 }
