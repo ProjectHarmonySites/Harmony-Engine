@@ -1,0 +1,3 @@
+User-agent: *
+Noindex: /404
+Noindex: /legal
