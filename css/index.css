@@ -79,6 +79,7 @@ nav ul li.selected {
     border-bottom: 4px solid #2db8f3;
 }
 
+
 /* Lander Section */
 
 #lander {
@@ -124,6 +125,7 @@ nav ul li.selected {
 .p1 { background-image: url("../images/backgrounds/tree.jpg"); }
 .p2 { background-image: url("../images/backgrounds/waterfall.jpg"); }
 .p3 { background-image: url("../images/backgrounds/bridge.jpg"); }
+.p4 { background-image: url("../images/backgrounds/ocean.jpg"); }
 
 /* Download Section */
 
@@ -186,6 +188,7 @@ nav ul li.selected {
     width: 30vw;
     background-color: #f8f8f8;
     border-radius: 18px;
+    box-shadow: 5px 10px 10px #aaaaaa;
 }
 
 .card h2 {
@@ -217,6 +220,11 @@ nav ul li.selected {
 .card button p {
     margin: 0;
     font-size: 1.5rem;
+}
+
+.card.recommended-card {
+    background-color: #f5f5f5;
+    box-shadow: 25px 30px 10px #aaaaaa;
 }
 
 /* Documentation Section */
@@ -258,4 +266,31 @@ nav ul li.selected {
 #documentation .wrapper .btns button p {
     font-size: 1.2rem;
     margin: 0.6em 0;
+}
+
+/* Footer */
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .wrapper ul {
+    list-style: none;
+    text-align: center;
+}
+
+footer .wrapper li {
+    font-family: "Open Sans";
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+footer .wrapper a {
+    text-decoration: none;
+}
+
+footer .wrapper .head li {
+    font-size: 1.5rem;
+    text-decoration: underline;
 }
