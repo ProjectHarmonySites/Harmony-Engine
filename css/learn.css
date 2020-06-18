@@ -1,0 +1,46 @@
+#main {
+	height: 90vh;
+	background-image: url("../images/backgrounds/6.png");
+	background-size: cover;
+}
+
+#main .cards {
+	height: 90vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#main .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	min-height: 24em;
+	width: 30vw;
+	background-color: #ffffffba;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#main .card h3 {
+	margin: 0.5em 0 0 0;
+	font-family: "Open Sans";
+	font-size: 2rem;
+}
+
+#main .card p {
+	font-family: "Montserrat";
+	padding: 0 1em;
+	font-size: 1.3rem;
+	margin: 2em 0;
+}
+
+#main .card button {
+	width: 85%;
+	height: 3em;
+	margin: 0 0 1em 0;
+}
+
+#main .card button p {
+	margin: 0;
+}

@@ -27,13 +27,11 @@ button:hover {
     background-color: #5e9bf0;
 }
 
-button.gray-btn {
-    background-color: #aaaaaa;
-}
+button.gray-btn { background-color: #aaaaaa; }
+button.gray-btn:hover { background-color: #8f8f8f; }
 
-button.gray-btn:hover {
-    background-color: #8f8f8f;
-}
+button.red-btn { background-color: #f56042; }
+button.red-btn:hover { background-color: #fc4c28; }
 
 .become-patron button {
     width: 20vw;

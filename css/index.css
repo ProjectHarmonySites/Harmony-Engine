@@ -99,7 +99,11 @@
 }
 
 .card {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     width: 30vw;
+    min-height: 20em;
     background-color: #f8f8f8;
     border-radius: 18px;
     box-shadow: 5px 10px 10px #aaaaaa;
