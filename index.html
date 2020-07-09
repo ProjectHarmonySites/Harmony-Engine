@@ -12,21 +12,28 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header>
+    <nav>
         <h1 class="logo-txt">Harmony Engines</h1>
-        <nav>
+        <div class="burger" onclick="toggleNav()">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+        <div class="content">
             <ul class="nav-links">
-                <li><a href="#">Download</a></li>
-                <li><a href="#">Learn</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Education</a></li>
+                <a href=""><li><p>Download</p></li></a>
+                <a href=""><li><p>Learn</p></li></a>
+                <a href=""><li><p>Documentation</p></li></a>
+                <a href=""><li><p>Education</p></li></a>
             </ul>
-        </nav>
-        <a href="#" class="login"><button>Login</button></a>
-    </header>
+            <a href="#" class="login"><button>Log-In</button></a>
+        </div>
+    </nav>
 
     <section id="main">
         <img src="images/enginewindow.png" alt="Image of the Game Engine">
     </section>
+
+    <script src="js/common.js"></script>
 </body>
 </html>
