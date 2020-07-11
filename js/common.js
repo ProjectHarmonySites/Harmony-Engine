@@ -12,7 +12,7 @@ function toggleNav() {
 }
 
 function removeTranslate() {
-	if(window.innerWidth < 862) { 
+	if(window.innerWidth < 950) { 
 		if(navContent.classList.contains("translate-content")) {
 			navContent.classList.remove("translate-content");
 			burger.classList.remove("translate-burger");
