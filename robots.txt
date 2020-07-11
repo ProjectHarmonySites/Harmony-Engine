@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /download
 Noindex: /download
-Noindex: /client
 Noindex: /404
 Noindex: /legal

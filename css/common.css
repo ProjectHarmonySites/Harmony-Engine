@@ -17,6 +17,23 @@
 /******************* UNIVERSAL CLASSES *******************/
 
 .hidden { display: none !important; }
+.dark-bg { background-color: #24252A; color: #eeeeee !important; }
+.light-bg { background-color: #eeeeee; color: #333333 !important; }
+.back-to-top h1 { font-weight: 100; }
+.back-to-top:hover { background-color: #212226; }
+
+.back-to-top {
+    font-family: "Montserrat";
+    text-align: center;
+    min-height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+}
 
 /******************* NAV BAR *******************/
 
@@ -45,13 +62,21 @@ nav .logo-txt {
     font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
     font-weight: 900;
     color: #e2e2e2;
+    transition-duration: 0.15s;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
 }
+
+nav .logo-txt:hover { color: #7ca9e9; }
 
 nav .nav-links { list-style: none; }
 
 nav .nav-links li {
     display: inline-block;
     padding: 10px 20px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
 }
 
 nav .nav-links li a {
@@ -177,3 +202,154 @@ nav .translate-burger .line-2 { opacity: 0%; position: absolute; }
     nav .btns .login { padding-right: 0; }
     nav .btns a { width: 50vw; }
 }
+
+/******************* Light Section *******************/
+
+.light-section {
+    padding: 4em 1.4em;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-around;
+    font-family: Montserrat;
+    color: #333333;
+    align-items: center;
+    min-height: 30em;
+}
+
+.light-section div { width: 45vw; }
+
+.light-section .info h1 { 
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 1em 0;
+}
+
+.light-section .info p {
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+.light-section button {
+    height: 50px;
+}
+
+.light-section button p { 
+    color: #333333; 
+    font-family: "Montserrat";
+}
+
+.light-section img {
+    width: 45vw;
+    height: auto; 
+}
+
+/******************* Dark Section *******************/
+
+.dark-section { 
+    background-color: #24252A;
+    color: #eeeeee;
+    padding: 4em 1.4em;
+    display: flex;
+    justify-content: space-around;
+    font-family: Montserrat;
+    align-items: center;
+    min-height: 30em;
+}
+
+.dark-section div { width: 45vw; }
+
+.dark-section .info h1 { 
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 1em 0;
+}
+
+.dark-section .info p {
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+.dark-section img {
+    width: 30vw;
+    height: auto; 
+}
+
+.dark-section .graphic { text-align: center; }
+
+
+/******************* THANKS *******************/
+
+.thanks {
+    text-align: center;
+    padding: 4em 0;
+    min-height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.thanks h1 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    margin: 0 0 2em 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.thanks ul {
+    margin: 0 0 3em 0;
+}
+
+.thanks ul li {
+    width: 24vw;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+/******************* FOOTER *******************/
+
+footer {
+    padding: 0 0 0.4em 0;
+    font-family: "Montserrat";
+}
+
+footer .links {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0 1.75em 0;
+    text-align: left;
+}
+
+footer .links li.title {
+    color: #000000;
+    font-weight: 500;
+    margin: 0 0 0.5em 0;
+    font-size: 1.1rem;
+}
+
+footer.dark-bg .links li.title { color: #eeeeee; }
+
+footer .links li.title:hover { color: #000000; }
+
+footer .links li {
+    color: #0645AD;
+    font-weight: 100;
+}
+
+footer .links li:hover { color: #0760f2; }
+
+footer h4 {
+    font-weight: 100;
+    margin: 0 0 0 0.25em;
+}
+
+
+
+
+
+
+
+
+
