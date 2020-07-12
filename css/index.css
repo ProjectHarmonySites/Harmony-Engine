@@ -1,0 +1,32 @@
+/******************* MAIN *******************/
+
+#main {
+    background-color: #24252A;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#main img {
+	width: 98vw;
+}
+
+/******************* Responsive Desing *******************/
+
+@media only screen and (max-width: 700px) {
+	#download .graphic { display: none; }
+	#download .rg, .lg div { width: 100vw; }
+	#download .info { width: 100vw; }
+}
+
+
+@media only screen and (max-width: 460px) {
+	.graphic { display: none; }
+	.rg, .lg div { width: 100vw; }
+}
+
+@media only screen and (max-width: 340px) {
+	.rg, .lg { padding: 4em 0 4em 1.4em; }
+	.rg .info { width: 100vw; }
+
+}

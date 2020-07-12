@@ -1,0 +1,355 @@
+/******************* FONTS *******************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+}
+
+/******************* UNIVERSAL CLASSES *******************/
+
+.hidden { display: none !important; }
+.dark-bg { background-color: #24252A; color: #eeeeee !important; }
+.light-bg { background-color: #eeeeee; color: #333333 !important; }
+.back-to-top h1 { font-weight: 100; }
+.back-to-top:hover { background-color: #212226; }
+
+.back-to-top {
+    font-family: "Montserrat";
+    text-align: center;
+    min-height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+}
+
+/******************* NAV BAR *******************/
+
+body {
+    overflow-x: hidden;
+}
+
+nav li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #212226;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0;
+}
+
+nav .logo-txt {
+    cursor: pointer; 
+    font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color: #e2e2e2;
+    transition-duration: 0.15s;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+}
+
+nav .logo-txt:hover { color: #7ca9e9; }
+
+nav .nav-links { list-style: none; }
+
+nav .nav-links li {
+    display: inline-block;
+    padding: 10px 20px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+}
+
+nav .nav-links li a {
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+nav .nav-links li:hover { color: #7ca9e9; }
+
+nav .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 66%;
+}
+
+button {
+    padding: 9px 20px;
+    background-color: transparent;
+    border: solid 3px #7ca9e9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    outline: none;
+}
+
+button:hover {
+    background-color: #5e9bf0;
+    opacity: 100%;
+}
+
+.patreon button { border: solid 3px #f96854; }
+.patreon button:hover { background-color: #f96854; }
+
+nav .burger {
+    cursor: pointer; 
+    display: none;
+}
+
+nav .burger div {
+    height: 5px; 
+    width: 42px;
+    background-color: #e2e2e2;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+nav .burger .line-1, .line-3 {
+    transition: transform 0.5s ease-in-out 0s;
+    -moz-transition: transform 0.5s ease-in-out 0s;
+    -webkit-transition: transform 0.5s ease-in-out 0s;
+}
+
+nav .burger .line-2 {
+    transition: opacity 0.5s ease-in-out 0s;
+    -moz-transition: opacity 0.5s ease-in-out 0s;
+    -webkit-transition: opacity 0.5s ease-in-out 0s;
+}
+
+nav .translate-content { transform: translate(-150vw, 0); }
+
+nav .translate-burger .line-1 {
+    transform-origin: left;
+    transform: translate(10px, -7px) rotate(45deg);
+}
+
+nav .translate-burger .line-3 {
+    transform-origin: right;
+    transform: translate(-10px, -16px) rotate(-45deg);
+}
+
+nav .translate-burger .line-2 { opacity: 0%; position: absolute; }
+
+@media only screen and (max-width: 1067px) {
+    nav .nav-links li { padding: 0 10px; }
+}
+
+@media only screen and (max-width: 950px) {
+    nav .nav-links li {
+        display: flex; 
+        background-color: #1a1a1c;
+        border-radius: 5px;
+        border: solid 1px #24252A;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+    }
+
+    nav .nav-links li p {
+        font-size: 1.5rem;
+    }
+
+    nav .content {
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: -150vw;
+        width: 100vw;
+        transition: transform 0.5s ease-in-out 0s;
+        -moz-transition: transform 0.5s ease-in-out 0s;
+        -webkit-transition: transform 0.5s ease-in-out 0s;
+    }
+
+    nav .burger {
+        display: block;
+    }
+
+    nav button {
+        width: 50vw;
+        background-color: #5e9bf0;
+        opacity: 80%;
+    }
+
+    nav .patreon button {
+        background-color: #f96854;
+    }
+
+    nav .btns { display: flex; }
+    nav .btns .login { padding-right: 0; }
+    nav .btns a { width: 50vw; }
+}
+
+/******************* Light Section *******************/
+
+.light-section {
+    padding: 4em 1.4em;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-around;
+    font-family: Montserrat;
+    color: #333333;
+    align-items: center;
+    min-height: 30em;
+}
+
+.light-section div { width: 45vw; }
+
+.light-section .info h1 { 
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 1em 0;
+}
+
+.light-section .info p {
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+.light-section button {
+    height: 50px;
+}
+
+.light-section button p { 
+    color: #333333; 
+    font-family: "Montserrat";
+}
+
+.light-section img {
+    width: 45vw;
+    height: auto; 
+}
+
+/******************* Dark Section *******************/
+
+.dark-section { 
+    background-color: #24252A;
+    color: #eeeeee;
+    padding: 4em 1.4em;
+    display: flex;
+    justify-content: space-around;
+    font-family: Montserrat;
+    align-items: center;
+    min-height: 30em;
+}
+
+.dark-section div { width: 45vw; }
+
+.dark-section .info h1 { 
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 1em 0;
+}
+
+.dark-section .info p {
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+.dark-section img {
+    width: 30vw;
+    height: auto; 
+}
+
+.dark-section .graphic { text-align: center; }
+
+
+/******************* THANKS *******************/
+
+.thanks {
+    text-align: center;
+    padding: 4em 0;
+    min-height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.thanks h1 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    margin: 0 0 2em 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.thanks ul {
+    margin: 0 0 3em 0;
+}
+
+.thanks ul li {
+    width: 24vw;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+/******************* FOOTER *******************/
+
+footer {
+    padding: 0 0 0.4em 0;
+    font-family: "Montserrat";
+}
+
+footer .links {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0 1.75em 0;
+    text-align: left;
+}
+
+footer .links li.title {
+    color: #000000;
+    font-weight: 500;
+    margin: 0 0 0.5em 0;
+    font-size: 1.1rem;
+}
+
+footer.dark-bg .links li.title { color: #eeeeee; }
+
+footer .links li.title:hover { color: #000000; }
+
+footer .links li {
+    color: #0645AD;
+    font-weight: 100;
+}
+
+footer .links li:hover { color: #0760f2; }
+
+footer h4 {
+    font-weight: 100;
+    margin: 0 0 0 0.25em;
+}
+
+
+
+
+
+
+
+
+
