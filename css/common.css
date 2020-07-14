@@ -79,6 +79,8 @@ nav .nav-links li {
     -moz-transition-duration: 0.2s;
 }
 
+nav .nav-links a.selected li p { color: #7ca9e9; }
+
 nav .nav-links li a {
     transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
