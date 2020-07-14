@@ -18,7 +18,7 @@
 
 .hidden { display: none !important; }
 .dark-bg { background-color: #24252A; color: #eeeeee !important; }
-.light-bg { background-color: #eeeeee; color: #333333 !important; }
+.light-bg { background-color: #eaeaea; color: #333333 !important; }
 .back-to-top h1 { font-weight: 100; }
 .back-to-top:hover { background-color: #212226; }
 
@@ -33,6 +33,11 @@
     transition-duration: 0.1s;
     -webkit-transition-duration: 0.1s;
     -moz-transition-duration: 0.1s;
+}
+
+header h1 {
+    font-family: "Poppins";
+    font-size: 4rem !important;
 }
 
 /******************* NAV BAR *******************/
@@ -346,12 +351,3 @@ footer h4 {
     font-weight: 100;
     margin: 0 0 0 0.25em;
 }
-
-
-
-
-
-
-
-
-
