@@ -448,14 +448,19 @@ header .graphic, img {
 /******************* FOOTER *******************/
 
 footer {
+    margin: 0;
     padding: 0 0 0.4em 0;
     font-family: "Montserrat";
+}
+
+footer ul {
+    list-style: none;
 }
 
 footer .links {
     display: flex;
     justify-content: space-around;
-    margin: 2em 0 1.75em 0;
+    padding: 2em 0 1.75em 0;
     text-align: left;
 }
 
