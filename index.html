@@ -34,7 +34,7 @@
     </nav>
 
     <section id="main">
-        <img src="images/engine-mac.png" alt="Image of the Game Engine">
+        <img id="enginewindow" alt="Image of the Game Engine">
     </section>
 
     <section id="download" class="light-section">
@@ -149,5 +149,24 @@
     </footer>
 
     <script src="js/common.js"></script>
+
+    <script>
+    	const engineImage = document.querySelector("#main #enginewindow");
+
+    	function assignImage() {
+    		var osName;
+    		let rawOsName = window.navigator.platform;
+
+    		if(rawOsName.toLowerCase().startsWith("mac")) {
+    			osName = "mac";
+    		} else {
+    			osName = "windows";
+    		}
+
+    		engineImage.src = `images/engine-${osName}.png`;
+    	}
+
+    	assignImage();
+    </script>
 </body>
 </html>
