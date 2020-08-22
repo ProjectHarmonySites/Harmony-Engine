@@ -62,9 +62,10 @@ section.split div {
 }
 
 section.split h1 {
-	font-weight: 400;
-	font-size: 2.2rem;
+	font-weight: 900;
+	font-size: 2.5rem;
 	margin: 0 0 1.25em 0;
+	font-family: "Poppins";
 }
 
 section.split p {
@@ -87,7 +88,6 @@ section.split button {
 	color: #24252A !important;
 }
 
-
 .dark-section {
 	background-color: #24252A;
 	color: #eaeaea !important;
@@ -95,6 +95,11 @@ section.split button {
 
 .light-section button p { color: #24252A !important; }
 .dark-section button p { color: #eaeaea !important; }
+
+@media only screen and (max-width: 585px) {
+	.split .graphic { display: none; }
+	.split .info { width: 100%; }
+}
 
 /*** NAV BAR ***/
 
@@ -135,6 +140,9 @@ nav ul li {
 	-webkit-transition-duration: 0.2s;
 }
 
+nav ul a li.selected { color: #7ca9e9; }
+nav ul a li.selected:hover { color: #ffffff; }
+
 nav ul li:hover {
 	color: #7ca9e9;
 }
@@ -144,6 +152,16 @@ nav button, #thanks button {
 }
 
 nav button:hover, #thanks button:hover { background-color: #f96854; }
+
+@media only screen and (max-width: 890px) {
+	nav ul { display: none; }
+}
+
+@media only screen and (max-width: 490px) {
+	nav button { display: none; }
+	nav h1 { width: 100vw; text-align: center; }
+}
+
 
 /*** FOOTER ***/
 
@@ -177,6 +195,18 @@ footer h3 {
 	padding: 0 0 0.05em 0.25em;
 }
 
+@media only screen and (max-width: 575px) {
+	footer .links {
+		display: block;
+		text-align: center;
+	}
+
+	footer .links ul {
+		padding: 1.2em 0;
+		margin: 0;
+	}
+}
+
 /*** THANKS ***/
 
 #thanks {
@@ -203,4 +233,16 @@ footer h3 {
 #thanks button {
 	margin: 4em 0 0 0;
 	width: 25vw;
+}
+
+#thanks button p {
+	width: 100% !important;
+}
+
+@media only screen and (max-width: 500px) {
+	#thanks button { width: 50vw; }
+}
+
+@media only screen and (max-width: 400px) {
+	#thanks .sponsors p { width: 45vw; }
 }

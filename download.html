@@ -10,120 +10,76 @@
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-	<nav>
-        <a href="/"><h1 class="logo-txt">Harmony Engines</h1></a>
-        <div class="burger" onclick="toggleNav()">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
-        </div>
-        <div class="content">
-            <ul class="nav-links">
-                <a href="download" class="selected"><li><p>Download</p></li></a>
-                <a href="learn"><li><p>Learn</p></li></a>
-                <a href="documentation"><li><p>Documentation</p></li></a>
-                <a href="education"><li><p>Education</p></li></a>
-            </ul>
-            <div class="btns">
-                <a href="https://www.patreon.com/harmonyengine" target="_blank" class="patreon"><button>Support</button></a>
-            </div>
-        </div>
+    <nav>
+        <a href="/"><h1>Harmony Engines</h1></a>
+        <ul>
+            <a href="downalod">
+                <li class="selected">Download</li>
+            </a>
+            <a href="learn">
+                <li>Learn</li>
+            </a>
+            <a href="documentation">
+                <li>Documentation</li>
+            </a>
+            <a href="education">
+                <li>Education</li>
+            </a>
+        </ul>
+        <a href="https://www.patreon.com/harmonyengine" target="_blank"><button><p>Join Us</p></button></a>
     </nav>
 
-	<header>
-		<div class="info" style="margin: 0 0 0 3em">
-			<div style="margin-bottom: 4em">
-				<h1><span style="font-weight: 900">Download</span> <span style="font-weight: 300">v1.0</span></h1>
-				<p>Harmony Engine is completely <em>free</em> to download, but we kindly ask that you would donate and become a <strong>patron</strong> to support the future releases of Harmony Engine. Not to mention our patrons get special privileges! Just click <a href="https://www.patreon.com/harmonyengine" target="_blank" class="link">here</a> to support us.</p>
-			</div>
-			<a href=""><button><p>MacOS X</p></button></a>
-			<a href=""><button><p>Windows 10</p></button></a>
-		</div>
+    <section id="donwload" class="split light-section">
+        <div class="info">
+            <h1 style="font-size: 4rem; margin-bottom: 0;">Download <span style="font-weight: 300;">v1.0</span></h1>
+            <p>Harmony Engine is completely <em>free</em> to download, but we kindly ask that you would dontate and become a <strong>patron</strong> to support the future releases of Harmony Engines. Not to mention our patrons get <strong>special privilages</strong>! Just click <a href="https://www.patreon.com/harmonyengine" target="_blank">here</a> to join us.</p>
+            <span>
+                <a href=""><button><p>MacOS X</p></button></a>
+                <a href=""><button><p>Windows 10</p></button></a>
+            </span>
+        </div>
 
-		<div class="graphic" id="download-graphic">
-			<img src="images/unDraw/download.svg" alt="Download Graphic">	
-		</div>
-	</header>
-
-	<section class="dark-section">
-		<div class="graphic">
-			<img src="images/unDraw/old.svg" alt="Old Computer">
-		</div>
-
-		<div class="info">
-			<h1>Older Versions</h1>
-			<p>Find older versions on the older versions page. There just select the version you desire.</p>
-			<br><br>
-			<a href="versions/"><button><p>Older Version</p></button></a>
-		</div>
-	</section>
-
-	<section class="light-section">
-		<div class="info">
-			<h1>Learn Harmony Engine</h1>
-			<p>Want to learn how to use Harmony Engine? Just check out the learn page to find out more.</p>
-			<br><br>
-			<a href="learn"><button><p>Learn More</p></button></a>
-		</div>
-
-		<div class="graphic">
-			<img src="images/unDraw/learn.svg" alt="Reading a Book">			
-		</div>
-	</section>
-
-	<section class="dark-section">
-		<div class="graphic">
-			<img src="images/unDraw/education.svg" alt="Graduation Cap">
-		</div>
-
-		<div class="info">
-			<h1>Education</h1>
-			<p>Are you and educator? If so you can incorperate Harmony Engine into the classroom to help teach about computer science!</p>
-			<br><br>
-			<a href="education"><button><p>Learn More</p></button></a>
-		</div>
-	</section>
-
-    <section class="thanks light-bg">
-        <h1>Make Possible Thanks To</h1>
-        <ul></ul>
-        <a href="https://www.patreon.com/harmonyengine" target="_blank"><button><p>Join Us</p></button></a>
+        <div class="graphic">
+            <img src="images/unDraw/download.svg" alt="Man donwloading something from his phone">
+        </div>
     </section>
 
-    <footer class="dark-bg">
+	<footer class="light-section">
         <div class="links">
             <ul>
                 <li class="title">Navigation Links</li>
-                <a href="/"><li>Home</li></a>
-                <a href="download"><li>Download</li></a>
-                <a href="learn"><li>Learn</li></a>
-                <a href="documentation"><li>Docuemntation</li></a>
-                <a href="education"><li>Education</li></a>
+                <a href=""><li>Home</li></a>
+                <a href=""><li>Download</li></a>
+                <a href=""><li>Learn</li></a>
+                <a href=""><li>Documentation</li></a>
+                <a href=""><li>Education</li></a>
             </ul>
+
             <ul>
                 <li class="title">External Links</li>
-                <a href="https://www.patreon.com/harmonyengine" target="_blank"><li>Patreon</li></a>
-                <a href="https://github.com/HarmonyEngines/HarmonyDocumentation" target="_blank"><li>GitHub® Documentation</li></a>
-                <a href="https://github.com/HarmonyEngines/HarmonyDocumentation/tree/newest-release" target="_blank"><li>Latest Documentation</li></a>
+                <a href=""><li>Patreon</li></a>
+                <a href=""><li>GitHub® Docs.</li></a>
+                <a href=""><li>Latest Docs.</li></a>
             </ul>
+
             <ul>
                 <li class="title">Social</li>
-                <a href="https://www.patreon.com/harmonyengine" target="_blank"><li>Patreon</li></a>
-                <a href="https://www.youtube.com/channel/UCoWOYue0LAcXQUprRLFHCIw" target="_blank"><li>Youtube</li></a>
+                <a href=""><li>Patreon</li></a>
+                <a href=""><li>YouTube</li></a>
             </ul>
+
             <ul>
-            	<li class="title">Legal</li>
-            	<a href="legal/cookie-policy"><li>Cookie Policy</li></a>
-            	<a href="legal/privacy-policy"><li>Privacy Policy</li></a>
-            	<a href="legal/terms-and-conditions"><li>Terms & Conditions</li></a>
+                <li class="title">Legal</li>
+                <a href=""><li>Cookie Policy</li></a>
+                <a href=""><li>Privacy Policy</li></a>
+                <a href=""><li>Terms & Conditions</li></a>
             </ul>
         </div>
-
-        <h4>Copyright © 2020 Harmony Engines</h4>
+        <h3>Copyright © 2020 Harmony Engines.</h3>
     </footer>
-
-    <script src="js/common.js"></script>
 </body>
 </html>
