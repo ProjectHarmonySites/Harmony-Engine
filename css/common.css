@@ -152,11 +152,11 @@ nav ul li:hover {
 	color: #7ca9e9;
 }
 
-nav button, #thanks button {
+nav button, #thanks button, .red-btn {
 	border-color: #f96854;
 }
 
-nav button:hover, #thanks button:hover { background-color: #f96854; }
+nav button:hover, #thanks button:hover, .red-btn:hover { background-color: #f96854; }
 
 @media only screen and (max-width: 890px) {
 	nav ul { display: none; }
