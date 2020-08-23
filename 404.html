@@ -7,15 +7,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.png">
 
     <style>
-        /******************* FONTS *******************/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap');
-
-html, body {
-    width: 100vw;
-    overflow-x: hidden !important;
-    box-sizing: border-box;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -23,618 +16,335 @@ html, body {
     padding: 0;
 }
 
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     background: transparent;
     width: 0px;
 }
 
-/******************* UNIVERSAL CLASSES *******************/
-
-.hidden { display: none !important; }
-.dark-bg { background-color: #24252A; color: #eeeeee !important; }
-.light-bg { background-color: #eaeaea; color: #333333 !important; }
-.light-bg a button p { color: #333333; font-weight: 200; }
-.back-to-top h1 { font-weight: 100; }
-.back-to-top:hover { background-color: #212226; }
-
-.back-to-top {
-    font-family: "Montserrat";
-    text-align: center;
-    min-height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition-duration: 0.1s;
-    -webkit-transition-duration: 0.1s;
-    -moz-transition-duration: 0.1s;
-}
-
-header h1 {
-    font-family: "Poppins";
-    font-size: 4rem !important;
-    margin: 0 !important;
-}
-
-.scrolldown {
-    padding: 0 0 0 0.5em;
-}
-
-.scrolldown span {
-    border-bottom: 2px solid #333333;
-    border-right: 2px solid #333333;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    transform: rotate(45deg);
-    animation: scroll-animation 2s infinite;
-}
-
-.scrolldown span:nth-child(1) {
-    transform: translate(0, -20px) rotate(45deg);
-}
-
-.scrolldown span:nth-child(2) { animation-delay: 0.2s; }
-
-.scrolldown span:nth-child(3) {
-    transform: translate(0, 20px) rotate(45deg);
-    animation-delay: 0.4s;
-}
-
-@keyframes scroll-animation {
-    0% {
-        opacity: 0%;
-    }
-
-    50% {
-        opacity: 100%;
-    }
-
-    100% {
-        opactiy: 0%;
-    }
-}
-
-/******************* NAV BAR *******************/
-
-body {
-    overflow-x: hidden;
-}
-
-nav li, a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-
-nav {
-    background-color: #212226;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px 0;
-}
-
-nav .logo-txt {
-    cursor: pointer; 
-    font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
-    font-weight: 900;
-    color: #e2e2e2;
-    transition-duration: 0.15s;
-    -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
-}
-
-nav .logo-txt:hover { color: #7ca9e9; }
-
-nav .nav-links { list-style: none; }
-
-nav .nav-links li {
-    display: inline-block;
-    padding: 10px 20px;
-    transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-}
-
-nav .nav-links a.selected li p { color: #7ca9e9; }
-
-nav .nav-links li a {
-    transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-}
-
-nav .nav-links li:hover { color: #7ca9e9; }
-
-nav .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 66%;
-}
+/*** DEFAULTS ***/
 
 button {
-    padding: 9px 20px;
+    padding: 0.65em 1.9em;
     background-color: transparent;
     border: solid 3px #7ca9e9;
     border-radius: 5px;
+    color: #ffffff;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-    outline: none;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
 }
 
 button:hover {
     background-color: #7ca9e9;
-    opacity: 100%;
 }
 
-.patreon button { border: solid 3px #f96854; }
-.patreon button:hover { background-color: #f96854; }
-
-nav .burger {
-    cursor: pointer; 
-    display: none;
+button.dark {
+    color: #000000;
 }
 
-nav .burger div {
-    height: 5px; 
-    width: 42px;
-    background-color: #e2e2e2;
-    margin: 4px 0;
-    border-radius: 5px;
+button p {
+    font-size: 1.1rem;
+    font-family: "Montserrat";
+    margin: 0 !important;
 }
 
-nav .burger .line-1, .line-3 {
-    transition: transform 0.5s ease-in-out 0s;
-    -moz-transition: transform 0.5s ease-in-out 0s;
-    -webkit-transition: transform 0.5s ease-in-out 0s;
-}
-
-nav .burger .line-2 {
-    transition: opacity 0.5s ease-in-out 0s;
-    -moz-transition: opacity 0.5s ease-in-out 0s;
-    -webkit-transition: opacity 0.5s ease-in-out 0s;
-}
-
-nav .translate-content { transform: translate(-150vw, 0); }
-
-nav .translate-burger .line-1 {
-    transform-origin: left;
-    transform: translate(10px, -7px) rotate(45deg);
-}
-
-nav .translate-burger .line-3 {
-    transform-origin: right;
-    transform: translate(-10px, -16px) rotate(-45deg);
-}
-
-nav .translate-burger .line-2 { opacity: 0%; position: absolute; }
-
-@media only screen and (max-width: 1067px) {
-    nav .nav-links li { padding: 0 10px; }
-}
-
-@media only screen and (max-width: 950px) {
-    nav .nav-links li {
-        display: flex; 
-        background-color: #1a1a1c;
-        border-radius: 5px;
-        border: solid 1px #24252A;
-        width: 100vw;
-        align-items: center;
-        justify-content: center;
-        height: 20vh;
-    }
-
-    nav .nav-links li p {
-        font-size: 1.5rem;
-    }
-
-    nav .content {
-        flex-direction: column;
-        position: absolute;
-        display: none;
-        top: 75px;
-        right: -150vw;
-        width: 100vw;
-        transition: transform 0.5s ease-in-out 0s;
-        -moz-transition: transform 0.5s ease-in-out 0s;
-        -webkit-transition: transform 0.5s ease-in-out 0s;
-    }
-
-    nav .burger {
-        display: block;
-    }
-
-    nav button {
-        width: 50vw;
-        background-color: #7ca9e9;
-        opacity: 80%;
-    }
-
-    nav .patreon button {
-        background-color: #f96854;
-    }
-
-    nav .btns { display: flex; }
-    nav .btns .login { padding-right: 0; }
-    nav .btns a { width: 50vw; }
-}
-
-/******************* HEADER *******************/
-
-header {
+section.split {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 34em;
+    font-family: "Montserrat";
+    padding: 4em 2em;
 }
 
-header h1 {
+section.split button {
+    color: #24252A;
+}
+
+section.split div {
+    width: 45vw;
+}
+
+section.split h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 0 0 1.25em 0;
+    font-family: "Poppins";
+}
+
+section.split#header h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+section.split p {
+    margin: 0 0 2em 0;
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+section.split img {
+    width: 100%;
+    height: auto;
+}
+
+section.split button {
+    margin: 0.5em 0 0 0;
+}
+
+.light-section {
+    background-color: #eaeaea;
+    color: #24252A !important;
+}
+
+.dark-section {
+    background-color: #24252A;
+    color: #eaeaea !important;
+}
+
+.light-section button p { color: #24252A !important; }
+.dark-section button p { color: #eaeaea !important; }
+
+@media only screen and (max-width: 585px) {
+    .split .graphic { display: none; }
+    .split .info { width: 100%; }
+}
+
+.line { height: 1px; }
+.white { background-color: #ffffff }
+.black { background-color: #000000; }
+
+/*** NAV BAR ***/
+
+nav {
+    background-color: #212226;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+    padding: 1.75em 0;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav h1 {
+    color: #e2e2e2;
+    width: 100%;
     font-family: "Poppins";
     font-weight: 900;
 }
 
-header p {
-    font-family: "Montserrat";
-    font-size: 1.2rem;
-    color: #333333;
-    font-weight: 100;
-}
-
-header p a {
-    color: blue;
-    font-family: "Montserrat";
-    font-size: 1.2rem;
-    text-decoration: underline;
-    font-weight: 100;
-}
-
-header .info {
-    width: 45vw;
-}
-
-header .graphic, img { 
-    width: 35vw; 
-    height: auto;
-}
-
-/******************* CARDS *******************/
-
-
-.cards {
-    display: flex;
-    justify-content: space-around;
-    margin: 3em 0;
-    font-family: "Montserrat";
-}
-
-.card {
-    width: 25%;
-    background-color: #eeeeee;
-    padding: 2em;
-    text-align: center;
-    color: #333333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-}
-
-.card button {
-    color: #333333;
-}
-
-.card a {
-    color: blue;
-    text-decoration: underline;
-}
-
-.card button p {
-    margin: 0;
-}
-
-.card h1 { margin: 0 0 1em 0; }
-.card p { margin: 0 0 2em 0; }
-
-/******************* LIGHT SECTION *******************/
-
-.light-section {
-    padding: 4em 1.4em;
-    background-color: #eaeaea;
-    display: flex;
-    justify-content: space-around;
-    font-family: Montserrat;
-    color: #333333;
-    align-items: center;
-    min-height: 30em;
-}
-
-.light-section div { width: 45vw; }
-
-.light-section .info h1 { 
-    font-size: 2.2rem;
-    font-weight: 400;
-    margin: 0 0 1em 0;
-}
-
-.light-section .info p {
-    font-size: 1.15rem;
-    font-weight: 300;
-}
-
-.light-section button {
-    height: 50px;
-}
-
-.light-section button p { 
-    color: #333333; 
-    font-family: "Montserrat";
-}
-
-.light-section img {
-    width: 45vw;
-    height: auto; 
-}
-
-.light-section a.link {
-    color: blue;
-    font-size: 1.15rem;
-    font-weight: 200;
-    text-decoration: underline;
-}
-
-/******************* DARK SECTION *******************/
-
-.dark-section { 
-    background-color: #24252A;
-    color: #eeeeee;
-    padding: 4em 1.4em;
-    display: flex;
-    justify-content: space-around;
-    font-family: Montserrat;
-    align-items: center;
-    min-height: 30em;
-}
-
-.dark-section div { width: 45vw; }
-
-.dark-section .info h1 { 
-    font-size: 2.2rem;
-    font-weight: 400;
-    margin: 0 0 1em 0;
-}
-
-.dark-section .info p {
-    font-size: 1.15rem;
-    font-weight: 300;
-}
-
-.dark-section img {
-    width: 45vw;
-    height: auto; 
-}
-
-.dark-section .graphic { text-align: center; }
-
-
-/******************* THANKS *******************/
-
-.thanks {
-    text-align: center;
-    padding: 4em 0;
-    min-height: 15em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.thanks h1 {
-    font-family: "Montserrat";
-    font-weight: 500;
-    margin: 0 0 2em 0;
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-.thanks ul {
-    margin: 0 0 3em 0;
-}
-
-.thanks ul li {
-    width: 24vw;
-    display: inline-block;
-    font-family: "Montserrat";
-    font-weight: 100;
-    font-size: 1.1rem;
-}
-
-/******************* FOOTER *******************/
-
-footer {
-    margin: 0;
-    padding: 0 0 0.4em 0;
-    font-family: "Montserrat";
-}
-
-footer ul {
+nav ul {
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 45vw;
 }
+
+nav ul li {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 400;
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+nav ul a li.selected { color: #7ca9e9; }
+nav ul a li.selected:hover { color: #ffffff; }
+
+nav ul li:hover {
+    color: #7ca9e9;
+}
+
+nav button, #thanks button, .red-btn {
+    border-color: #f96854;
+}
+
+nav button:hover, #thanks button:hover, .red-btn:hover { background-color: #f96854; }
+
+@media only screen and (max-width: 890px) {
+    nav ul { display: none; }
+}
+
+@media only screen and (max-width: 490px) {
+    nav button { display: none; }
+    nav h1 { width: 100vw; text-align: center; }
+}
+
+
+/*** FOOTER ***/
 
 footer .links {
     display: flex;
     justify-content: space-around;
-    padding: 2em 0 1.75em 0;
-    text-align: left;
 }
 
-footer .links li.title {
-    color: #000000;
-    font-weight: 500;
-    margin: 0 0 0.5em 0;
-    font-size: 1.1rem;
+footer .links ul {
+    list-style: none;
+    font-family: "Montserrat";
+    font-weight: 300;
+    margin: 2em 0;
 }
 
-footer.dark-bg .links li.title { color: #eeeeee; }
-
-footer .links li.title:hover { color: #000000; }
-
-footer .links li {
-    color: #0645AD;
-    font-weight: 100;
+footer .links ul .title {
+    font-weight: 600;
+    margin: 0 0 0.6em 0;
 }
 
-footer .links li:hover { color: #0760f2; }
-
-footer h4 {
-    font-weight: 100;
-    margin: 0 0 0 0.25em;
+footer .links ul a {
+    color: blue;
+    text-decoration: none;
 }
 
-/******************* RESPONISVE DESIGN *******************/
-@media only screen and (max-width: 780px) {
-    .cards .card {
-        width: 30%;
-    }
+footer .links ul a:hover { text-decoration: underline; }
+
+footer h3 {
+    font-family: "Montserrat";
+    font-weight: 300;
+    padding: 0 0 0.05em 0.25em;
 }
 
-@media only screen and (max-width: 700px) {
-    #download .graphic { display: none; }
-    #download .rg, .lg div { width: 100vw; }
-    #download .info { width: 100vw; }
-    #download-graphic, header .graphic { display: none; }
-
-    header, header .info {
-        width: 100vw;
-    }
-
-    header .info {
-        padding-left: 5px !important; 
-        margin-left: 0 !important;
-    }
+footer.dark-section .links ul a {
+    color: lightblue;
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 575px) {
     footer .links {
         display: block;
-        align-items: center;
         text-align: center;
-        width: 100vw;
     }
 
     footer .links ul {
-        margin: 2em 0;
+        padding: 1.2em 0;
+        margin: 0;
     }
+}
+
+/*** THANKS ***/
+
+#thanks {
+    padding: 2em 0;
+    text-align: center;
+}
+
+#thanks h1 {
+    font-family: "Poppins";
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 0 0 1.25em 0;
+}
+
+#thanks .sponsors p {
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-size: 1.1rem;
+    display: inline-block;
+    width: 24vw;
+    margin: 0.25em 0;
+}
+
+#thanks button {
+    margin: 4em 0 0 0;
+    width: 25vw;
+}
+
+#thanks button p {
+    width: 100% !important;
 }
 
 @media only screen and (max-width: 500px) {
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cards .card {
-        width: 60%;
-        margin: 1em 0;
-    }    
+    #thanks button { width: 50vw; }
 }
 
-@media only screen and (max-width: 460px) {
-    .graphic { display: none; }
-    .rg, .lg div { width: 100vw; }
-    .info { width: 100vw; }
-    .info h1{ width: 100vw; }
-}
-
-@media only screen and (max-width: 340px) {
-    .rg, .lg { padding: 4em 0 4em 1.4em; }
-    .rg .info { width: 100vw; }
-
-    .dark-section, .light-section {
-        width: 100vw;
-        text-align: center;
-    }
-
-    .dark-section h1, .light-section h1 {
-        width: 100vw;
-        text-align: left;
-    }
+@media only screen and (max-width: 400px) {
+    #thanks .sponsors p { width: 45vw; }
 }
     </style>
 </head>
 <body>
 	<nav>
-        <a href="/"><h1 class="logo-txt">Harmony Engines</h1></a>
-        <div class="burger" onclick="toggleNav()">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
-        </div>
-        <div class="content">
-            <ul class="nav-links">
-                <a href="download"><li><p>Download</p></li></a>
-                <a href="learn"><li><p>Learn</p></li></a>
-                <a href="documentation"><li><p>Documentation</p></li></a>
-                <a href="education"><li><p>Education</p></li></a>
-            </ul>
-            <div class="btns">
-                <a href="https://www.patreon.com/harmonyengine" target="_blank" class="patreon"><button>Support</button></a>
-            </div>
-        </div>
-    </nav>
-
-    <header style="background-image: url('images/unDraw/outerspace.svg'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-    	<div style="text-align: center">
-	    	<h1>Lost at Space</h1>
-	    	<a href="/" class="patreon"><button><p>Fly Home</p></button></a> 
-    	</div>
-    </header>
-	
-	 <section class="thanks dark-bg">
-        <h1>Make Possible Thanks To</h1>
+        <a href="/"><h1>Harmony Engines</h1></a>
         <ul>
+            <a href="downalod">
+                <li>Download</li>
+            </a>
+            <a href="learn">
+                <li>Learn</li>
+            </a>
+            <a href="documentation">
+                <li>Documentation</li>
+            </a>
+            <a href="education">
+                <li>Education</li>
+            </a>
         </ul>
         <a href="https://www.patreon.com/harmonyengine" target="_blank"><button><p>Join Us</p></button></a>
+    </nav>
+
+    <section id="header" class="split light-section">
+        <div class="info">
+            <h1>Lost in Space</h1>
+            <p>It seem the page you are looking for doesn't exist! Don't worry just click the button below to navigate back to the home page.</p>
+            <a href="/"><button><p>Fly Home</p></button></a>
+        </div>
+        <div class="graphic">
+            <img src="images/unDraw/outerspace.svg" alt="Astronaut with a rocket.">
+        </div>
     </section>
 
-    <footer class="light-bg">
+   <section id="thanks" class="dark-section">
+        <h1>Made Possible Thanks To</h1>
+        <span class="sponsors"></span>
+        <div>
+            <a href="https://www.patreon.com/harmonyengine" target="_blank"><button><p>Join Us</p></button></a>
+        </div>
+    </section>
+
+    <div class="line black"></div>
+
+    <footer class="dark-section">
         <div class="links">
             <ul>
                 <li class="title">Navigation Links</li>
-                <a href="/"><li>Home</li></a>
-                <a href="download"><li>Download</li></a>
-                <a href="learn"><li>Learn</li></a>
-                <a href="documentation"><li>Docuemntation</li></a>
-                <a href="education"><li>Education</li></a>
+                <a href=""><li>Home</li></a>
+                <a href=""><li>Download</li></a>
+                <a href=""><li>Learn</li></a>
+                <a href=""><li>Documentation</li></a>
+                <a href=""><li>Education</li></a>
             </ul>
+
             <ul>
                 <li class="title">External Links</li>
-                <a href="https://www.patreon.com/harmonyengine" target="_blank"><li>Patreon</li></a>
-                <a href="https://github.com/HarmonyEngines/HarmonyDocumentation" target="_blank"><li>GitHub® Documentation</li></a>
-                <a href="https://github.com/HarmonyEngines/HarmonyDocumentation/tree/newest-release" target="_blank"><li>Latest Documentation</li></a>
+                <a href=""><li>Patreon</li></a>
+                <a href=""><li>GitHub® Docs.</li></a>
+                <a href=""><li>Latest Docs.</li></a>
             </ul>
+
             <ul>
                 <li class="title">Social</li>
-                <a href="https://www.patreon.com/harmonyengine" target="_blank"><li>Patreon</li></a>
-                <a href="https://www.youtube.com/channel/UCoWOYue0LAcXQUprRLFHCIw" target="_blank"><li>Youtube</li></a>
+                <a href=""><li>Patreon</li></a>
+                <a href=""><li>YouTube</li></a>
             </ul>
+
             <ul>
                 <li class="title">Legal</li>
-                <a href="legal/cookie-policy"><li>Cookie Policy</li></a>
-                <a href="legal/privacy-policy"><li>Privacy Policy</li></a>
-                <a href="legal/terms-and-conditions"><li>Terms & Conditions</li></a>
+                <a href=""><li>Cookie Policy</li></a>
+                <a href=""><li>Privacy Policy</li></a>
+                <a href=""><li>Terms & Conditions</li></a>
             </ul>
         </div>
-
-        <h4>Copyright © 2020 Harmony Engines</h4>
+        <h3>Copyright © 2020 Harmony Engines.</h3>
     </footer>
 
-    <script src="js/common.js"></script>
+    <script src="/js/common.js"></script>
 </body>
 </html>
