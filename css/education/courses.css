@@ -1,0 +1,155 @@
+#header {
+    min-height: 30em;
+    display: grid;
+    grid-template-columns: 25em auto;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "course data"
+                         "course data";
+}
+
+#header ul {
+    background-color: #212226;
+    margin: 1.2em;
+    padding: 1.2em;
+    list-style: none;
+    grid-area: course;
+}
+
+#header ul li {
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-size: 1.2rem;
+    padding: 0.25em;
+    margin: 0 0 0.75em 0.75em;
+    cursor: pointer;
+}
+
+#header ul h1 {
+    padding: 0 0.25em 0.5em 0.25em;
+    color: #ffffff;
+    font-family: "Poppins";
+}
+
+#header ul li:hover { background-color: #313338; }
+#header ul li.selected { background-color: #313338; }
+
+#header .data {
+    margin: 1.2em;
+    grid-area: data;
+}
+
+#header .data h1 {
+    font-family: "Poppins";
+    font-size: 2.5rem;
+}
+
+#header .data p {
+    font-family: "Montserrat";
+    font-size: 1.1rem;
+    margin: 1em 0 0 0;
+}
+
+#header .data button {
+    margin: 4em 0 0 0;
+    display: none;
+}
+
+#header .data button p { color: black; }
+
+#header .data .container {
+    width: 50%;
+    background-color: #dddddd;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#header .data .container p {
+    margin: 0;
+    position: absolute;
+    transform: translateX(10px) translateY(4px);
+}
+
+#header .data .container h3 {
+    text-align: right;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    margin: 0.25em 0 0 0;
+    font-weight: 500;
+}
+
+#header .data .difficulty-slider {
+    display: none;
+    align-items: center;
+}
+
+#header .data h3 {
+    margin: 0 0 0 0.25em;
+    font-family: "Montserrat";
+    font-size: 1.1rem;
+    font-weight: 500;;
+}
+
+#header .data .difficulty {
+    text-align: right;
+    padding: 15px 0;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #7ca9e9;
+    width: 50%;
+}
+
+@media only screen and (max-width: 765px) {
+    #header {
+        grid-template-columns: 18em auto;
+    }
+
+    #header ul {
+        padding: 0.5em 0 0 0;
+        text-align: center;
+    }
+
+    #header ul li {
+        margin: 0;
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    #header .data .container {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    #header ul { margin-left: 0; }
+    #header { grid-template-columns: 15em auto; }
+}
+
+@media only screen and (max-width: 445px) {
+    #header {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;;
+    }
+
+    #header ul {
+        margin: 1.2em;
+        padding: 1.2em;
+    }
+
+    #header .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #header .data .difficulty-slider {
+        justify-content: space-evenly;
+    }
+
+    #header .data .difficulty-slider h3 {
+        margin: 0;
+        padding: 0;
+    }
+}
