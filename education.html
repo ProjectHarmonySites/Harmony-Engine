@@ -9,36 +9,45 @@
     <meta name="keywords" content="HarmonyEngine, Game Engine, 2D, 2D Game Engine, Programming, Code, Computer, Game, Game Development, Game Design">
 
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/education.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.png">
 </head>
 <body>
 	<nav>
         <a href="/"><h1>Harmony Engines</h1></a>
         <ul>
-            <a href="download">
+            <a href="/download">
                 <li>Download</li>
             </a>
-            <a href="learn">
+            <a href="/learn">
                 <li>Learn</li>
             </a>
-            <a href="documentation">
+            <a href="/documentation">
                 <li>Documentation</li>
             </a>
-            <a href="education">
+            <a href="/education">
                 <li class="selected">Education</li>
             </a>
         </ul>
         <a href="https://www.patreon.com/harmonyengine" target="_blank"><button><p>Join Us</p></button></a>
     </nav>
 
-    <section id="header" class="split light-section">
-        <div class="info">
-            <h1>Education</h1>
-            <p>Currently all of our resources are being devoted to the creation of Harmony Engine v1.0. If you would like to help speed along the process of development so we can start work on the education courses, please consider supporting us for just $5 per month.</p>
-            <a href="https://www.patreon.com/harmonyengine" target="_blank"><button class="red-btn"><p>Support Us</p></button></a>
-        </div>
-        <div class="graphic">
-            <img src="images/unDraw/education.svg" alt="Graduation Cap">
+    <section id="header">
+        <ul>
+            <h1>Courses</h1>
+            <li name="Getting Started" diff="1" desc="The best course for starting out. The getting started course shows you everything you need to get started with Harmony Engine." location="GettingStarted" onclick="setCourse(this);">1. Getting Started</li>
+        </ul>
+        <div class="data">
+            <h1></h1>
+            <div class="difficulty-slider">
+                <div class="container">
+                    <p>Difficulty</p>
+                    <div class="difficulty"></div>
+                </div>
+                <h3></h3>
+            </div>
+            <p class="desc"></p>
+            <button onclick="selectCourse()"><p>Start Course</p></button>
         </div>
     </section>
 
@@ -87,5 +96,6 @@
     </footer>
 
     <script src="js/common.js"></script>
+    <script src="js/courses.js"></script>
 </body>
 </html>
